@@ -119,7 +119,7 @@ export const UserForm = ({ isOpen, onClose, onSubmit, editingUser }: UserFormPro
             <Label htmlFor="password">Contraseña *</Label>
             <Input
               id="password"
-              type="password"
+              type="text"
               value={formData.password}
               onChange={(e) => handleInputChange('password', e.target.value)}
               placeholder="Contraseña del usuario"

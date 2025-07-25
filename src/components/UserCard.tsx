@@ -2,7 +2,7 @@ import { User } from '@/types/User';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Edit, Trash2, CreditCard, Mail, Calendar } from 'lucide-react';
+import { Edit, Trash2, CreditCard, Mail, Calendar, Key } from 'lucide-react';
 
 interface UserCardProps {
   user: User;
@@ -42,6 +42,12 @@ export const UserCard = ({ user, onEdit, onDelete, onTogglePayment }: UserCardPr
       </CardHeader>
       
       <CardContent className="space-y-3">
+        <div className="flex items-center gap-2 text-sm">
+          <Key size={14} className="text-secondary" />
+          <span className="text-muted-foreground">Contraseña:</span>
+          <span className="font-medium">{user.password}</span>
+        </div>
+
         <div className="flex items-center gap-2 text-sm">
           <Calendar size={14} className="text-primary" />
           <span className="text-muted-foreground">Día de pago:</span>
